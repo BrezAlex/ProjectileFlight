@@ -4,14 +4,11 @@ import numpy as np
 g = 9.81
 v0 = 10
 alpha = 45
-x0 = 0
-y0 = 0
 t = 0
 dt = 0.005
 
 x = []
 y = []
-y_value = 0
 
 while t <= 2:
     t += float(dt)
