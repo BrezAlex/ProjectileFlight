@@ -21,6 +21,7 @@ while t <= 2:
     y.append(y_value)
     print(x_value, y_value)
 
+plt.title('Траектория полёта тела без сопротивления')
 plt.plot(x, y)
 plt.show()
 
