@@ -6,30 +6,21 @@ v0 = 10
 alpha = 45
 x0 = 0
 y0 = 0
-t = 1
-dt = input("Введите значение dt: ")
+t = 0
+dt = 0.005
 
 x = []
 y = []
+y_value = 0
 
-while y <= 0:
+while t <= 2:
+    t += float(dt)
+    x_value = v0 * np.cos(alpha) * t
+    y_value = v0 * np.sin(alpha) * t - (g * t ** 2)/2
+    x.append(x_value)
+    y.append(y_value)
+    print(x_value, y_value)
 
+plt.plot(x, y)
+plt.show()
 
-
-# vx = []
-# vy = []
-#
-# while t <= 10:
-#     t += float(dt)
-#     vx_value = v0 * np.cos(alpha)
-#     vy_value = v0 * np.sin(alpha) - g * t
-#     vx.append(vx_value)
-#     vy.append(vy_value)
-#
-# v = np.sqrt(vx_value ** 2 + vy_value ** 2)
-# print(v)
-# print(vx)
-# print(vy)
-#
-# plt.plot(vx, vy)
-# plt.show()
